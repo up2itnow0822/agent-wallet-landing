@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0dccf2",
+              "background-light": "#f5f8f8",
+              "background-dark": "#101f22",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 px-6 md:px-20 lg:px-40 py-4 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined">account_tree</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-tight">TaskBridge</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Features</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Solutions</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Pricing</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">About</a>
+</nav>
+<div class="flex gap-3">
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20 hover:brightness-110 transition-all">
+                        Get Started
+                    </button>
+<button class="hidden sm:flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white text-sm font-bold hover:bg-slate-200 dark:hover:bg-slate-700 transition-all border border-slate-200 dark:border-slate-700">
+                        Log In
+                    </button>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="px-6 md:px-20 lg:px-40 py-12 lg:py-20">
+<div class="max-w-[1200px] mx-auto">
+<!-- Hero Section -->
+<div class="@container">
+<div class="flex flex-col gap-10 @[864px]:flex-row items-center">
+<div class="flex flex-col gap-8 flex-1 @[864px]:justify-center">
+<div class="flex flex-col gap-4 text-left">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase bg-primary/10 text-primary border border-primary/20 w-fit">
+                                        Next-Gen Productivity
+                                    </span>
+<h1 class="text-slate-900 dark:text-white text-5xl font-black leading-[1.1] tracking-tight @[480px]:text-6xl">
+                                        Bridge the Gap Between <span class="text-primary">Vision</span> and Execution
+                                    </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg font-normal leading-relaxed max-w-[540px]">
+                                        The futuristic task management platform designed for high-velocity teams. Streamline workflows with AI-driven insights and real-time collaboration.
+                                    </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-14 px-6 bg-primary text-white text-base font-bold shadow-xl shadow-primary/25 hover:translate-y-[-2px] transition-all">
+                                        Start Free Trial
+                                    </button>
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-14 px-6 bg-white dark:bg-slate-800 text-slate-900 dark:text-white text-base font-bold border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all flex gap-2">
+<span class="material-symbols-outlined">play_circle</span>
+                                        Watch Demo
+                                    </button>
+</div>
+</div>
+<div class="w-full flex-1 relative">
+<div class="absolute -inset-4 bg-primary/10 rounded-3xl blur-2xl"></div>
+<div class="relative bg-white dark:bg-slate-800 p-2 rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-700">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-xl" data-alt="Modern minimalist dashboard showing colorful analytics and task progress charts" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAXI9w2U5fSsfUVqdlh2QLe9d1xMmBMpI7BoSe-b-9MMNf74oKW6R2Ga-jiiGWyvIYrDndFQQLz9sDwV3UbG40--SiRPLJfNpJezCpwVifxtA6-4kZp-pHryhv69Irc-YMFy2KhQZRVzWqb11ImbnFH1H7Yk8Ofrm_TQYTMaA3h20WpzqCG_fIEMdI3IPiwmuTOBU0HmQAUvPU5TSQpq2ZYDK45XhftcJCc1tBLVnZZj9NHaSXBncdNipCIz64xmkplo2ohQEYhJg");'></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Stats Section -->
+<div class="flex flex-wrap gap-6 py-16">
+<div class="flex min-w-[180px] flex-1 flex-col gap-3 rounded-2xl p-8 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Active Users</p>
+<div class="flex items-baseline gap-2">
+<p class="text-slate-900 dark:text-white text-4xl font-black tracking-tight">100k+</p>
+<span class="text-emerald-500 text-sm font-bold flex items-center">
+<span class="material-symbols-outlined text-sm">trending_up</span> 12%
+                                </span>
+</div>
+</div>
+<div class="flex min-w-[180px] flex-1 flex-col gap-3 rounded-2xl p-8 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Tasks Bridged</p>
+<div class="flex items-baseline gap-2">
+<p class="text-slate-900 dark:text-white text-4xl font-black tracking-tight">2.5M</p>
+<span class="text-emerald-500 text-sm font-bold flex items-center">
+<span class="material-symbols-outlined text-sm">trending_up</span> 25%
+                                </span>
+</div>
+</div>
+<div class="flex min-w-[180px] flex-1 flex-col gap-3 rounded-2xl p-8 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider">Efficiency Gain</p>
+<div class="flex items-baseline gap-2">
+<p class="text-slate-900 dark:text-white text-4xl font-black tracking-tight">40%</p>
+<span class="text-emerald-500 text-sm font-bold flex items-center">
+<span class="material-symbols-outlined text-sm">trending_up</span> 15%
+                                </span>
+</div>
+</div>
+</div>
+<!-- Features Section -->
+<div class="flex flex-col gap-12 py-20">
+<div class="flex flex-col gap-4 text-center max-w-[800px] mx-auto">
+<h2 class="text-primary font-bold text-sm tracking-[0.2em] uppercase">Enterprise-Grade Tools</h2>
+<h1 class="text-slate-900 dark:text-white text-4xl md:text-5xl font-black tracking-tight">
+                                Powerful Features for Modern Teams
+                            </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg font-normal">
+                                Redefining productivity with a workspace that anticipates your needs. Experience seamless flow across your entire project lifecycle.
+                            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="flex flex-col gap-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/40 p-8 hover:shadow-xl hover:border-primary/30 transition-all group">
+<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">psychology</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold">AI Prioritization</h3>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                                        Our neural engine ranks your tasks based on historical deadlines, team velocity, and project importance.
+                                    </p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="flex flex-col gap-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/40 p-8 hover:shadow-xl hover:border-primary/30 transition-all group">
+<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">hub</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold">Smart Workflows</h3>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                                        Automate repetitive actions with customizable bridge triggers. Connect your favorite tools in seconds.
+                                    </p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="flex flex-col gap-6 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800/40 p-8 hover:shadow-xl hover:border-primary/30 transition-all group">
+<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">sync_alt</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold">Real-time Sync</h3>
+<p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                                        Seamlessly collaborate across all devices with zero latency. Every update is instantly reflected worldwide.
+                                    </p>
+</div>
+</div>
+</div>
+</div>
+<!-- CTA Section -->
+<div class="my-20 p-8 md:p-16 rounded-[2rem] bg-slate-900 dark:bg-slate-800 relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-primary/20 rounded-full blur-[100px] -ml-32 -mb-32"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
+<div class="flex flex-col gap-4 text-center md:text-left">
+<h2 class="text-white text-3xl md:text-4xl font-black">Ready to bridge the gap?</h2>
+<p class="text-slate-300 text-lg">Join 10,000+ teams shipping faster than ever.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+<button class="bg-primary text-white font-bold h-14 px-10 rounded-xl hover:brightness-110 shadow-lg shadow-primary/20 transition-all whitespace-nowrap">
+                                    Start for free
+                                </button>
+<button class="bg-white/10 text-white font-bold h-14 px-10 rounded-xl hover:bg-white/20 transition-all backdrop-blur-sm border border-white/20 whitespace-nowrap">
+                                    Talk to Sales
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 py-12 px-6 md:px-20 lg:px-40">
+<div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="flex flex-col gap-6 col-span-1 md:col-span-1">
+<div class="flex items-center gap-3">
+<div class="size-7 flex items-center justify-center bg-primary rounded text-white">
+<span class="material-symbols-outlined text-sm">account_tree</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold">TaskBridge</h2>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                        Redefining the standard of team productivity through innovation and intelligent automation.
+                    </p>
+<div class="flex gap-4">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-slate-900 dark:text-white font-bold text-sm uppercase tracking-widest">Platform</h4>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors" href="#">Features</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors" href="#">Security</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors" href="#">Roadmap</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-slate-900 dark:text-white font-bold text-sm uppercase tracking-widest">Company</h4>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors" href="#">About</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors" href="#">Careers</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="text-slate-900 dark:text-white font-bold text-sm uppercase tracking-widest">Support</h4>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors" href="#">Help Center</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors" href="#">API Docs</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm transition-colors" href="#">Status</a>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-400 text-xs">© 2024 TaskBridge Inc. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs" href="#">Privacy Policy</a>
+<a class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-xs" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

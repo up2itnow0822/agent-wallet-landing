@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TaskBridge - Workflow Builder</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                        "panel-dark": "#162a2d",
+                        "border-dark": "#283639",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .grid-bg {
+            background-image: radial-gradient(circle, #283639 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .node-connector {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background-color: #0dccf2;
+            border-radius: 50%;
+            border: 2px solid #101f22;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 overflow-hidden">
+<div class="relative flex h-screen w-full flex-col overflow-hidden">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-border-dark px-6 py-3 bg-background-dark">
+<div class="flex items-center gap-4">
+<div class="text-primary">
+<svg class="size-6" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-slate-100 text-lg font-bold leading-tight tracking-tight">TaskBridge</h2>
+</div>
+<div class="flex flex-1 justify-center gap-8">
+<nav class="flex items-center gap-9">
+<a class="text-slate-100 text-sm font-medium hover:text-primary transition-colors" href="#">Workflows</a>
+<a class="text-slate-400 text-sm font-medium hover:text-slate-100 transition-colors" href="#">Agents</a>
+<a class="text-slate-400 text-sm font-medium hover:text-slate-100 transition-colors" href="#">Logs</a>
+</nav>
+</div>
+<div class="flex items-center gap-3">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded h-9 px-4 bg-primary text-background-dark text-sm font-bold leading-normal tracking-tight hover:brightness-110">
+<span>Deploy Workflow</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center rounded h-9 px-4 bg-border-dark text-slate-100 text-sm font-bold leading-normal tracking-tight hover:bg-slate-700">
+<span>Test Connection</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-9 ml-2 border border-border-dark" data-alt="User profile avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAvSZzXyuhWKMSMwpceBijCH0MnnnGhB3y8fuFj8ryqcVptZn3RcCgy6FixcgSG6nn9dFCY4LzIYndUm17smqrMmA9eJlxySjDPIvkLsFPwOFeM3UH4J44ynBDqWS7jDl-cb9VOcBCe6aaFm04ntwu9Cqn1JLuzacSfOFHUXcRc1aHyJF-fpVfJD1oB44oWYLMrmeWO9G5-kYEZmE2IkWGUXypkQBwcVJW848XaVGRlUAQ31blo_FDJ1aOTgT-dOxLD96yoN6b8uA");'></div>
+</div>
+</header>
+<div class="flex flex-1 overflow-hidden">
+<!-- Left Sidebar: Components -->
+<aside class="w-64 border-r border-border-dark bg-panel-dark flex flex-col">
+<div class="p-4 border-b border-border-dark">
+<h1 class="text-slate-100 text-base font-semibold">Nodes</h1>
+<p class="text-slate-400 text-xs">Drag elements to canvas</p>
+</div>
+<div class="flex-1 overflow-y-auto p-3 space-y-2">
+<div class="group flex items-center gap-3 px-3 py-3 rounded-lg bg-background-dark border border-border-dark hover:border-primary cursor-grab transition-all">
+<span class="material-symbols-outlined text-primary">play_arrow</span>
+<p class="text-slate-200 text-sm font-medium">Trigger</p>
+</div>
+<div class="group flex items-center gap-3 px-3 py-3 rounded-lg bg-background-dark border border-primary/50 hover:border-primary cursor-grab transition-all">
+<span class="material-symbols-outlined text-primary">smart_toy</span>
+<p class="text-slate-200 text-sm font-medium">AI Agent</p>
+</div>
+<div class="group flex items-center gap-3 px-3 py-3 rounded-lg bg-background-dark border border-border-dark hover:border-primary cursor-grab transition-all">
+<span class="material-symbols-outlined text-primary">code</span>
+<p class="text-slate-200 text-sm font-medium">JS Function</p>
+</div>
+<div class="group flex items-center gap-3 px-3 py-3 rounded-lg bg-background-dark border border-border-dark hover:border-primary cursor-grab transition-all">
+<span class="material-symbols-outlined text-primary">database</span>
+<p class="text-slate-200 text-sm font-medium">Database</p>
+</div>
+<div class="group flex items-center gap-3 px-3 py-3 rounded-lg bg-background-dark border border-border-dark hover:border-primary cursor-grab transition-all">
+<span class="material-symbols-outlined text-primary">call_split</span>
+<p class="text-slate-200 text-sm font-medium">Condition</p>
+</div>
+<div class="group flex items-center gap-3 px-3 py-3 rounded-lg bg-background-dark border border-border-dark hover:border-primary cursor-grab transition-all">
+<span class="material-symbols-outlined text-primary">mail</span>
+<p class="text-slate-200 text-sm font-medium">Email Alert</p>
+</div>
+</div>
+<div class="p-4 bg-background-dark/50 border-t border-border-dark">
+<div class="w-full bg-slate-800 rounded h-24 relative overflow-hidden group">
+<div class="absolute inset-0 flex items-center justify-center opacity-40 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-slate-400 text-4xl">map</span>
+</div>
+<p class="absolute bottom-1 left-2 text-[10px] text-slate-500 uppercase tracking-widest font-bold">Mini Map</p>
+</div>
+</div>
+</aside>
+<!-- Main Canvas Area -->
+<main class="flex-1 relative grid-bg overflow-hidden bg-background-dark">
+<!-- Canvas Toolbar -->
+<div class="absolute top-4 left-4 flex gap-2 z-10">
+<div class="bg-panel-dark border border-border-dark rounded-lg flex p-1 shadow-xl">
+<button class="p-2 hover:bg-slate-700 rounded text-slate-300"><span class="material-symbols-outlined text-sm">zoom_in</span></button>
+<button class="p-2 hover:bg-slate-700 rounded text-slate-300"><span class="material-symbols-outlined text-sm">zoom_out</span></button>
+<div class="w-px bg-border-dark mx-1"></div>
+<button class="p-2 hover:bg-slate-700 rounded text-slate-300"><span class="material-symbols-outlined text-sm">undo</span></button>
+<button class="p-2 hover:bg-slate-700 rounded text-slate-300"><span class="material-symbols-outlined text-sm">redo</span></button>
+</div>
+</div>
+<!-- Workflow Nodes (Mocked) -->
+<div class="absolute top-1/4 left-1/4 flex flex-col gap-16">
+<!-- Node 1: Trigger -->
+<div class="relative w-56 bg-panel-dark border-l-4 border-l-primary rounded-lg border-y border-r border-border-dark p-4 shadow-2xl">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-lg">bolt</span>
+<span class="text-xs font-bold uppercase tracking-wider text-slate-400">Trigger</span>
+</div>
+<h4 class="text-slate-100 text-sm font-medium">New Customer Message</h4>
+<p class="text-slate-500 text-[11px] mt-1">Webhook from Zendesk</p>
+<div class="node-connector -right-1.5 top-1/2 -translate-y-1/2"></div>
+</div>
+<!-- SVG Connections -->
+<svg class="absolute top-0 left-0 w-[800px] h-[600px] pointer-events-none" style="z-index: -1;">
+<path d="M 224 55 C 350 55, 300 150, 400 150" fill="none" opacity="0.6" stroke="#0dccf2" stroke-width="2"></path>
+<path d="M 624 150 C 700 150, 700 300, 800 300" fill="none" opacity="0.6" stroke="#0dccf2" stroke-dasharray="4" stroke-width="2"></path>
+</svg>
+<div class="flex gap-20">
+<!-- Node 2: AI Agent (Active) -->
+<div class="relative w-64 bg-panel-dark border border-primary rounded-lg p-4 shadow-[0_0_15px_rgba(13,204,242,0.2)]">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-lg">smart_toy</span>
+<span class="text-xs font-bold uppercase tracking-wider text-primary">AI Agent</span>
+</div>
+<span class="flex h-2 w-2 rounded-full bg-green-500"></span>
+</div>
+<h4 class="text-slate-100 text-sm font-medium">Sentiment Classifier</h4>
+<p class="text-slate-500 text-[11px] mt-1">GPT-4 Turbo • English/Spanish</p>
+<div class="node-connector -left-1.5 top-1/2 -translate-y-1/2"></div>
+<div class="node-connector -right-1.5 top-1/2 -translate-y-1/2"></div>
+</div>
+<!-- Node 3: Function -->
+<div class="relative w-56 bg-panel-dark border border-border-dark rounded-lg p-4 opacity-60">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-slate-400 text-lg">code</span>
+<span class="text-xs font-bold uppercase tracking-wider text-slate-500">Function</span>
+</div>
+<h4 class="text-slate-100 text-sm font-medium">Format Response</h4>
+<p class="text-slate-500 text-[11px] mt-1">Custom JS Transformer</p>
+<div class="node-connector -left-1.5 top-1/2 -translate-y-1/2"></div>
+</div>
+</div>
+</div>
+</main>
+<!-- Right Sidebar: Properties Panel -->
+<aside class="w-80 border-l border-border-dark bg-panel-dark flex flex-col">
+<div class="p-4 border-b border-border-dark flex justify-between items-center">
+<h3 class="text-slate-100 text-lg font-bold">Properties</h3>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-white">close</span>
+</div>
+<div class="flex-1 overflow-y-auto">
+<!-- Selected Node Info -->
+<div class="p-4 border-b border-border-dark bg-background-dark/30">
+<div class="flex items-center gap-3 mb-3">
+<div class="size-10 rounded bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">smart_toy</span>
+</div>
+<div>
+<p class="text-slate-100 font-semibold text-sm">Sentiment Classifier</p>
+<p class="text-slate-500 text-xs">Node ID: agent_sc_99</p>
+</div>
+</div>
+<div class="space-y-4 py-2">
+<div>
+<label class="block text-xs font-bold text-slate-400 uppercase mb-2">Model Version</label>
+<select class="w-full bg-background-dark border border-border-dark rounded-lg text-sm text-slate-200 focus:border-primary focus:ring-1 focus:ring-primary py-2 px-3">
+<option>GPT-4 Turbo (Recommended)</option>
+<option>GPT-3.5 Ultra</option>
+<option>Claude 3 Opus</option>
+</select>
+</div>
+<div>
+<label class="block text-xs font-bold text-slate-400 uppercase mb-2">System Prompt</label>
+<textarea class="w-full bg-background-dark border border-border-dark rounded-lg text-sm text-slate-200 focus:border-primary focus:ring-1 focus:ring-primary py-2 px-3 resize-none" placeholder="Analyze the customer intent..." rows="4">Analyze the incoming message and categorize into: URGENT, FEEDBACK, or QUESTION.</textarea>
+</div>
+<div class="flex items-center justify-between">
+<label class="text-xs font-bold text-slate-400 uppercase">Temperature</label>
+<span class="text-xs text-primary">0.7</span>
+</div>
+<input class="w-full h-1.5 bg-background-dark rounded-lg appearance-none cursor-pointer accent-primary" max="1" min="0" step="0.1" type="range" value="0.7"/>
+</div>
+</div>
+<!-- Advanced Settings Accordion -->
+<div class="p-4 border-b border-border-dark">
+<button class="flex items-center justify-between w-full text-sm font-semibold text-slate-300">
+<span>Input Mapping</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+<div class="p-4 border-b border-border-dark">
+<button class="flex items-center justify-between w-full text-sm font-semibold text-slate-300">
+<span>Retry Strategy</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Panel Footer -->
+<div class="p-4 bg-background-dark border-t border-border-dark flex gap-2">
+<button class="flex-1 py-2 px-4 rounded bg-primary text-background-dark text-sm font-bold hover:brightness-110">Apply Changes</button>
+<button class="p-2 rounded border border-border-dark text-slate-400 hover:text-red-400">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</aside>
+</div>
+<!-- Status Bar -->
+<footer class="h-8 border-t border-border-dark bg-background-dark px-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 text-[10px] text-slate-500 uppercase tracking-widest">
+<span class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+                Connected to Engine
+            </div>
+<div class="w-px h-3 bg-border-dark"></div>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest">Autosaved 2 mins ago</p>
+</div>
+<div class="flex items-center gap-4">
+<p class="text-[10px] text-slate-500 uppercase tracking-widest">3 Nodes • 2 Connections</p>
+</div>
+</footer>
+</div>
+</body></html>

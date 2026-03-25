@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI-Agent-Economy | Autonomous Smart Wallets</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(13, 204, 242, 0.05);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(13, 204, 242, 0.1);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(13, 204, 242, 0.15) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 dark:border-slate-800 px-6 lg:px-20 py-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="text-primary size-8 flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl">account_balance_wallet</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold tracking-tight">AI-Agent-Economy<span class="text-primary">.com</span></h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Wallets</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Security</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Developers</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Pricing</a>
+</nav>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-5 bg-primary text-background-dark text-sm font-bold transition-transform active:scale-95">
+                    Connect Wallet
+                </button>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="relative px-6 lg:px-20 py-16 lg:py-24 overflow-hidden hero-gradient">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+<div class="flex flex-col gap-8 flex-1 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider w-fit mx-auto lg:mx-0">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                            Next-Gen Autonomous Finance
+                        </div>
+<h1 class="text-slate-900 dark:text-slate-100 text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight">
+                            The Financial <span class="text-primary">Brain</span> for Your AI Agents.
+                        </h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg lg:text-xl max-w-2xl leading-relaxed">
+                            Autonomous Smart Wallets with non-custodial security, programmable logic, and gas-less execution designed specifically for the machine economy.
+                        </p>
+<div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+<button class="h-14 px-8 rounded-xl bg-primary text-background-dark font-bold text-lg hover:shadow-[0_0_20px_rgba(13,204,242,0.4)] transition-all">
+                                Launch App
+                            </button>
+<button class="h-14 px-8 rounded-xl border border-slate-700 dark:border-slate-800 text-slate-900 dark:text-slate-100 font-bold text-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+                                Read Docs
+                            </button>
+</div>
+</div>
+<div class="flex-1 relative w-full aspect-square max-w-lg">
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-[100px]"></div>
+<div class="relative glass-card rounded-3xl p-8 h-full flex items-center justify-center border border-primary/30">
+<div class="relative w-full h-full flex items-center justify-center">
+<!-- Abstract Wallet/Vault Visualization -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-64 h-64 border-2 border-primary/20 rounded-full animate-[spin_10s_linear_infinite]"></div>
+<div class="absolute w-48 h-48 border-2 border-primary/40 rounded-full animate-[spin_15s_linear_infinite_reverse]"></div>
+</div>
+<div class="z-10 bg-background-dark p-6 rounded-2xl border border-primary/50 shadow-[0_0_50px_rgba(13,204,242,0.3)]">
+<span class="material-symbols-outlined text-7xl text-primary">security</span>
+</div>
+<!-- Floating Data Points -->
+<div class="absolute top-10 right-10 glass-card p-3 rounded-lg border border-primary/20">
+<p class="text-[10px] text-primary font-mono uppercase">MPC Layer Active</p>
+</div>
+<div class="absolute bottom-10 left-10 glass-card p-3 rounded-lg border border-primary/20">
+<p class="text-[10px] text-primary font-mono uppercase">Liquidity Optimized</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Bar -->
+<section class="px-6 lg:px-20 py-12">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+<div class="glass-card rounded-xl p-8 border border-slate-200 dark:border-slate-800">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1">Total Value Managed</p>
+<h3 class="text-3xl font-bold text-slate-900 dark:text-slate-100">$420,690,000</h3>
+<p class="text-emerald-500 text-sm mt-2 flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span> +12.4%
+                        </p>
+</div>
+<div class="glass-card rounded-xl p-8 border border-slate-200 dark:border-slate-800">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1">Active Agents Deployed</p>
+<h3 class="text-3xl font-bold text-slate-900 dark:text-slate-100">12,542</h3>
+<p class="text-emerald-500 text-sm mt-2 flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span> +5.2%
+                        </p>
+</div>
+<div class="glass-card rounded-xl p-8 border border-slate-200 dark:border-slate-800">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1">Weekly Transactions</p>
+<h3 class="text-3xl font-bold text-slate-900 dark:text-slate-100">1.2M+</h3>
+<p class="text-emerald-500 text-sm mt-2 flex items-center gap-1 font-bold">
+<span class="material-symbols-outlined text-sm">trending_up</span> +18.9%
+                        </p>
+</div>
+</div>
+</section>
+<!-- Features Grid -->
+<section class="px-6 lg:px-20 py-24 bg-slate-50 dark:bg-slate-900/30">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="text-slate-900 dark:text-slate-100 text-4xl font-bold mb-4 tracking-tight">Enterprise-Grade Autonomy</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl">
+                            Powering the next generation of autonomous financial transactions with institutional security layers and programmable intelligence.
+                        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="group flex flex-col gap-6 p-8 rounded-2xl glass-card transition-all hover:border-primary/50">
+<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3">Non-Custodial Security</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Advanced MPC (Multi-Party Computation) technology ensuring your agents never lose control of their private keys. Cryptographic shares are distributed across secure enclaves.
+                                </p>
+</div>
+<div class="mt-auto pt-4 flex items-center text-primary font-bold text-sm gap-2">
+                                Learn about MPC <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="group flex flex-col gap-6 p-8 rounded-2xl glass-card transition-all hover:border-primary/50">
+<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">rule_folder</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3">Programmable Spending</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Set complex threshold signatures, time-locks, and whitelist logic. Control how much and where your agents can spend with granular precision.
+                                </p>
+</div>
+<div class="mt-auto pt-4 flex items-center text-primary font-bold text-sm gap-2">
+                                Configure Logic <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="group flex flex-col gap-6 p-8 rounded-2xl glass-card transition-all hover:border-primary/50">
+<div class="size-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">auto_mode</span>
+</div>
+<div>
+<h3 class="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3">Auto-Rebalancing</h3>
+<p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                    Dynamic gas management and liquidity optimization across multi-chain environments. Automatically move funds to maximize yield and minimize costs.
+                                </p>
+</div>
+<div class="mt-auto pt-4 flex items-center text-primary font-bold text-sm gap-2">
+                                View Performance <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="px-6 lg:px-20 py-24">
+<div class="max-w-7xl mx-auto relative overflow-hidden rounded-3xl bg-primary p-12 lg:p-20 flex flex-col items-center text-center gap-8">
+<div class="absolute top-0 right-0 -mr-20 -mt-20 size-80 bg-white/20 rounded-full blur-3xl"></div>
+<div class="absolute bottom-0 left-0 -ml-20 -mb-20 size-80 bg-background-dark/20 rounded-full blur-3xl"></div>
+<h2 class="text-background-dark text-4xl lg:text-5xl font-black max-w-3xl leading-tight relative z-10">
+                        Ready to empower your autonomous agents with financial sovereignty?
+                    </h2>
+<p class="text-background-dark/80 text-lg lg:text-xl font-medium max-w-xl relative z-10">
+                        Join 10,000+ developers building the future of the machine economy on AI-Agent-Economy.com.
+                    </p>
+<div class="flex flex-wrap gap-4 relative z-10">
+<button class="h-14 px-10 rounded-xl bg-background-dark text-primary font-bold text-lg hover:scale-105 transition-transform shadow-xl">
+                            Get Started Free
+                        </button>
+<button class="h-14 px-10 rounded-xl border-2 border-background-dark/20 text-background-dark font-bold text-lg hover:bg-background-dark/10 transition-colors">
+                            Contact Sales
+                        </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="px-6 lg:px-20 py-12 border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-2xl">account_balance_wallet</span>
+<span class="text-slate-900 dark:text-slate-100 font-bold">AI-Agent-Economy.com</span>
+</div>
+<div class="flex flex-wrap gap-8 text-sm text-slate-500 dark:text-slate-400">
+<a class="hover:text-primary" href="#">Twitter</a>
+<a class="hover:text-primary" href="#">Github</a>
+<a class="hover:text-primary" href="#">Discord</a>
+<a class="hover:text-primary" href="#">Terms</a>
+<a class="hover:text-primary" href="#">Privacy</a>
+</div>
+<div class="text-sm text-slate-500 dark:text-slate-400">
+                    © 2024 AI-Agent-Economy. All rights reserved.
+                </div>
+</div>
+</footer>
+</div>
+</body></html>

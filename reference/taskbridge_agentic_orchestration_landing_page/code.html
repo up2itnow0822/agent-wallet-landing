@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TaskBridge | Agentic Task Orchestration</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass {
+            background: rgba(16, 31, 34, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(13, 204, 242, 0.1);
+        }
+        .glow-shadow {
+            box-shadow: 0 0 20px rgba(13, 204, 242, 0.2);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(13, 204, 242, 0.15) 0%, transparent 70%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 selection:bg-primary/30">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<header class="fixed top-0 left-0 right-0 z-50 glass border-b border-primary/10">
+<div class="max-w-[1280px] mx-auto px-6 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-3xl">polyline</span>
+</div>
+<h2 class="text-xl font-black tracking-tight text-slate-900 dark:text-white uppercase">TaskBridge</h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Platform</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Solutions</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Developers</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Pricing</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block text-sm font-bold px-4 py-2 hover:text-primary transition-colors">Login</button>
+<button class="bg-primary text-background-dark text-sm font-bold px-5 py-2 rounded-lg hover:brightness-110 transition-all glow-shadow">
+                        Launch App
+                    </button>
+</div>
+</div>
+</header>
+<main class="pt-16">
+<section class="relative min-h-[921px] flex items-center justify-center px-6 overflow-hidden hero-gradient">
+<div class="absolute inset-0 z-0 opacity-20">
+<div class="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/40 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px]"></div>
+</div>
+<div class="max-w-[1100px] w-full grid lg:grid-cols-2 gap-12 items-center relative z-10">
+<div class="flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-fit">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="text-[10px] font-bold tracking-widest uppercase text-primary">v2.0 Neural Layer Live</span>
+</div>
+<h1 class="text-5xl md:text-7xl font-black leading-[1.1] tracking-tighter">
+                            The Universal <span class="text-primary">Bridge</span> for Agentic Orchestration
+                        </h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-[500px]">
+                            Connect, coordinate, and scale autonomous AI agents through a unified neural layer. TaskBridge enables seamless agent-to-agent communication with real-time oversight.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-background-dark font-bold px-8 py-4 rounded-xl hover:scale-105 transition-transform glow-shadow flex items-center gap-2">
+                                Start Building <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-white/5 border border-white/10 dark:text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors flex items-center gap-2">
+                                Watch Demo <span class="material-symbols-outlined">play_circle</span>
+</button>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute inset-0 bg-primary/10 rounded-3xl blur-2xl group-hover:bg-primary/20 transition-all"></div>
+<div class="relative rounded-3xl border border-primary/30 overflow-hidden glass aspect-square flex items-center justify-center p-8">
+<div class="w-full h-full rounded-2xl bg-slate-800/50 flex items-center justify-center relative overflow-hidden">
+<img alt="AI agents connected by glowing cyan lines" class="w-full h-full object-cover opacity-60" data-alt="Futuristic digital network of AI agents connected by glowing cyan lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdEDoFwfkIDTuf-PMhozXIruj1NYdFsquXAabLQ_OdBcWxf2DCfFhfAD_1DHh4jRdBd5D9XM5AeqrI04F7LxMqWYS0K_MZ-TXb6v_sFdCm3gGHaF-wT9BluhlTd_My8-PZkgNZ0vz97hlIqMOYbZ4yvuh935IneYoKY65KNqyN2sz4aVyNC0aeV5TE_kzAEdVnTof1wf3947MMSdJRZWJT9xUUr27j8zJdCs4Noti5A7rjhuXTp9vaHP-kfZDr5-y_di2ej6lyHA"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center gap-4">
+<div class="flex gap-12 items-center">
+<div class="size-16 rounded-full glass border-primary flex items-center justify-center"><span class="material-symbols-outlined text-primary text-3xl">smart_toy</span></div>
+<div class="h-px w-24 bg-gradient-to-r from-primary to-transparent"></div>
+<div class="size-16 rounded-full glass border-primary flex items-center justify-center"><span class="material-symbols-outlined text-primary text-3xl">psychology</span></div>
+</div>
+<div class="flex gap-12 items-center">
+<div class="h-24 w-px bg-gradient-to-b from-primary to-transparent"></div>
+<div class="size-20 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-primary text-4xl">hub</span>
+</div>
+<div class="h-24 w-px bg-gradient-to-b from-primary to-transparent"></div>
+</div>
+<div class="flex gap-12 items-center">
+<div class="size-16 rounded-full glass border-primary flex items-center justify-center"><span class="material-symbols-outlined text-primary text-3xl">memory</span></div>
+<div class="h-px w-24 bg-gradient-to-l from-primary to-transparent"></div>
+<div class="size-16 rounded-full glass border-primary flex items-center justify-center"><span class="material-symbols-outlined text-primary text-3xl">database</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 max-w-[1280px] mx-auto">
+<div class="flex flex-col gap-6 mb-16">
+<h2 class="text-4xl md:text-5xl font-black tracking-tight">Seamless Orchestration</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl leading-relaxed">
+                        Deploy complex multi-agent workflows with zero friction. Our orchestration engine handles the heavy lifting of state management and task handoffs.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="group p-8 rounded-2xl glass border-primary/5 hover:border-primary/40 transition-all flex flex-col gap-6">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-3">Dynamic Scheduling</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Intelligent task distribution based on agent availability, token costs, and specialized expertise.</p>
+</div>
+</div>
+<div class="group p-8 rounded-2xl glass border-primary/5 hover:border-primary/40 transition-all flex flex-col gap-6">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">save</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-3">State Persistence</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Maintain context across long-running agentic processes effortlessly with our neural memory vault.</p>
+</div>
+</div>
+<div class="group p-8 rounded-2xl glass border-primary/5 hover:border-primary/40 transition-all flex flex-col gap-6">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">route</span>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-3">Autonomous Routing</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Real-time path optimization for complex multi-step objectives using reactive decision trees.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-primary/5 relative overflow-hidden">
+<div class="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 relative">
+<div class="rounded-2xl border border-primary/20 overflow-hidden glow-shadow">
+<img alt="High-tech interface showing data streams" class="w-full aspect-video object-cover" data-alt="Futuristic cybersecurity interface with scrolling code and encryption symbols" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_WumK45aNmzLc0-iqKy2vNlKfsR1x4eeT_sAkIwIoCtAllS8P98H2hwcnxh5Y51zk496H4Q5Tcb7JpGaci6LzqC8Om4IVJfKOd4Q7cHgrz-HTLEuh9TJFaBuUfqEgYXu6wDH6aBzZo67izZaLnWflVjK5SPfa6V2Q32GinxS4fsPjCVcE90kKSK6IwscXtYhGtpEI1dQQOESeanQZjEvB5ZyEjIgaD8j298tOJW1qV20AY5LCiiriqI3jMdW-hbq_iGL72sCaNQ"/>
+</div>
+<div class="absolute -bottom-6 -right-6 p-4 glass rounded-xl border-primary/30 flex items-center gap-3">
+<div class="size-10 rounded-full bg-green-500/20 flex items-center justify-center text-green-500">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<p class="text-xs font-bold uppercase text-slate-500">Verification</p>
+<p class="text-sm font-bold">Secure Handshake: OK</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-10 order-1 lg:order-2">
+<div class="flex flex-col gap-4">
+<h2 class="text-4xl md:text-5xl font-black tracking-tight">Agent-to-Agent Communication</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                                The first standardized protocol for cross-model collaboration. Let your specialized agents talk to each other in a secure, high-speed environment.
+                            </p>
+</div>
+<div class="grid gap-6">
+<div class="flex items-start gap-5 p-5 rounded-xl bg-background-dark/50 border border-primary/10">
+<span class="material-symbols-outlined text-primary text-3xl">chat_bubble</span>
+<div>
+<h4 class="font-bold text-white mb-1">Unified Protocol</h4>
+<p class="text-sm text-slate-400">A common language layer for GPT-4, Claude, Llama 3, and custom domain-specific agents.</p>
+</div>
+</div>
+<div class="flex items-start gap-5 p-5 rounded-xl bg-background-dark/50 border border-primary/10">
+<span class="material-symbols-outlined text-primary text-3xl">shield_locked</span>
+<div>
+<h4 class="font-bold text-white mb-1">Secure Handshakes</h4>
+<p class="text-sm text-slate-400">Cryptographic verification for every inter-agent request ensuring zero-trust integrity.</p>
+</div>
+</div>
+<div class="flex items-start gap-5 p-5 rounded-xl bg-background-dark/50 border border-primary/10">
+<span class="material-symbols-outlined text-primary text-3xl">bolt</span>
+<div>
+<h4 class="font-bold text-white mb-1">Low-Latency Messaging</h4>
+<p class="text-sm text-slate-400">Sub-millisecond communication bridge for real-time task execution and swarm logic.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 max-w-[1280px] mx-auto">
+<div class="text-center flex flex-col items-center gap-6 mb-16">
+<h2 class="text-4xl md:text-5xl font-black tracking-tight">Real-time Task Tracking</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-2xl">
+                        Full observability into your agentic swarm. Monitor every decision, cost, and outcome in a live stream of consciousness.
+                    </p>
+</div>
+<div class="glass rounded-3xl border border-primary/20 overflow-hidden min-h-[500px] flex flex-col">
+<div class="border-b border-primary/10 px-6 py-4 flex items-center justify-between bg-primary/5">
+<div class="flex items-center gap-4">
+<div class="flex gap-1.5">
+<div class="size-3 rounded-full bg-red-500/50"></div>
+<div class="size-3 rounded-full bg-yellow-500/50"></div>
+<div class="size-3 rounded-full bg-green-500/50"></div>
+</div>
+<span class="text-xs font-mono text-slate-500 uppercase tracking-widest">Console :: Swarm_Monitor_01</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs text-primary font-bold">LIVE FEED</span>
+<div class="size-2 rounded-full bg-primary animate-pulse"></div>
+</div>
+</div>
+<div class="flex-1 p-6 font-mono text-sm overflow-hidden flex flex-col gap-4">
+<div class="flex items-start gap-4 text-primary/80">
+<span class="text-slate-600">[12:44:01]</span>
+<p><span class="text-primary font-bold">AGENT_LEAD:</span> Initializing research workflow for "Quantum Computing Market 2024"</p>
+</div>
+<div class="flex items-start gap-4 text-slate-300">
+<span class="text-slate-600">[12:44:03]</span>
+<p><span class="text-white/60">BRIDGE:</span> Handing off sub-task "Patent Retrieval" to AGENT_SEARCH</p>
+</div>
+<div class="flex items-start gap-4 text-green-400/80">
+<span class="text-slate-600">[12:44:08]</span>
+<p><span class="font-bold">AGENT_SEARCH:</span> 142 patents found. Initiating clustering via AGENT_DATA_VIZ</p>
+</div>
+<div class="flex items-start gap-4 text-slate-300">
+<span class="text-slate-600">[12:44:12]</span>
+<p><span class="text-white/60">BRIDGE:</span> Validating output integrity... <span class="text-primary">PASS (99.2%)</span></p>
+</div>
+<div class="flex items-start gap-4 text-yellow-400/80">
+<span class="text-slate-600">[12:44:15]</span>
+<p><span class="font-bold">SYSTEM:</span> Token usage threshold reached 40%. Optimizing routing path.</p>
+</div>
+<div class="mt-auto pt-6 border-t border-primary/10 flex justify-between items-center">
+<div class="flex gap-8">
+<div>
+<p class="text-[10px] text-slate-500 uppercase">Active Agents</p>
+<p class="text-xl font-bold text-white">12</p>
+</div>
+<div>
+<p class="text-[10px] text-slate-500 uppercase">Avg Latency</p>
+<p class="text-xl font-bold text-white">42ms</p>
+</div>
+<div>
+<p class="text-[10px] text-slate-500 uppercase">Tasks Completed</p>
+<p class="text-xl font-bold text-white">8,421</p>
+</div>
+</div>
+<button class="bg-primary/10 text-primary border border-primary/30 px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider">Expand Monitor</button>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6">
+<div class="max-w-[1000px] mx-auto bg-gradient-to-br from-primary/20 to-primary/5 rounded-[2.5rem] p-12 md:p-20 text-center flex flex-col items-center gap-10 border border-primary/20 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+<h2 class="text-4xl md:text-6xl font-black tracking-tight leading-tight">Ready to bridge the gap <br/>in your AI stack?</h2>
+<p class="text-slate-600 dark:text-slate-400 text-lg max-w-xl">
+                        Join 500+ enterprises building the next generation of autonomous workflows on the TaskBridge neural layer.
+                    </p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="bg-primary text-background-dark font-bold px-10 py-5 rounded-2xl hover:scale-105 transition-transform glow-shadow text-lg">
+                            Get Early Access
+                        </button>
+<button class="bg-white/10 dark:text-white font-bold px-10 py-5 rounded-2xl hover:bg-white/20 transition-colors text-lg border border-white/10">
+                            Contact Sales
+                        </button>
+</div>
+</div>
+</section>
+</main>
+<footer class="py-12 px-6 border-t border-primary/10">
+<div class="max-w-[1280px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="text-primary">
+<span class="material-symbols-outlined text-2xl">polyline</span>
+</div>
+<h2 class="text-lg font-black tracking-tight uppercase">TaskBridge</h2>
+</div>
+<div class="flex gap-12 text-sm font-medium text-slate-500">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Documentation</a>
+<a class="hover:text-primary transition-colors" href="#">API Status</a>
+</div>
+<div class="text-sm text-slate-500">
+                    © 2024 TaskBridge. Orchestrating the future.
+                </div>
+</div>
+</footer>
+</div>
+</body></html>
