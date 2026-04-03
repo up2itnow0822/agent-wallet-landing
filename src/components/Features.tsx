@@ -5,41 +5,40 @@ import { motion, useReducedMotion } from "framer-motion";
 
 const features = [
   {
-    title: "Non-Custodial",
+    title: "Non-Custodial Wallet",
     description:
-      "Agents hold their own keys via ERC-4337 smart accounts. No pooled funds.",
+      "ERC-6551 token-bound accounts + ERC-8004 identity. Agents hold their own keys. x402 micropayments built in.",
     Icon: ShieldIcon,
   },
   {
-    title: "Spending Controls",
+    title: "Self-Improving RSI",
     description:
-      "Per-task budgets, session limits, allowlisted recipients. Fail-closed by default.",
+      "4-tier recursive self-improvement engine with full user control. Agents measure, hypothesize, mutate, and evolve.",
     Icon: SlidersIcon,
   },
   {
-    title: "x402 Native",
+    title: "Cross-Chain Identity",
     description:
-      "HTTP 402 Payment Required becomes machine-negotiable. 75M+ mainnet transactions.",
-    Icon: HttpIcon,
-    href: "https://x402.org",
-  },
-  {
-    title: "Cross-Chain",
-    description:
-      "17 chains via CCTP. Bridge USDC from Base to Arbitrum, Solana, and more.",
+      "UAID + ERC-8004 on-chain identity across chains. Agents build portable reputation through verified transactions.",
     Icon: ChainIcon,
   },
   {
-    title: "Identity & Reputation",
+    title: "Agent Access Control",
     description:
-      "ERC-8004 on-chain identity. Agents build reputation through verified transactions.",
-    Icon: IdIcon,
+      "Guard middleware filters agents by identity and reputation before they touch your site or API. Pay accepts x402.",
+    Icon: HttpIcon,
   },
   {
-    title: "Framework Agnostic",
+    title: "94 Built-In Skills",
     description:
-      "Works with Claude Code, Cursor, OpenCode, LangChain, AutoGen, smolagents.",
+      "Production skills for OpenClaw, Hermes, LangChain, CrewAI, and AutoGen. 332+ tests. Payments and wallet built in.",
     Icon: GridIcon,
+  },
+  {
+    title: "Rust Core (v1.1)",
+    description:
+      "High-performance Rust core coming in v1.1. 138 Rust tests. BSL 1.1 licensed — use freely, compete commercially with a license.",
+    Icon: IdIcon,
   },
 ];
 
@@ -109,16 +108,7 @@ export default function Features() {
                         }
                   }
                 >
-                  {f.href ? (
-                    <a href={f.href} className="block no-underline text-inherit h-full" target="_blank" rel="noopener noreferrer">
-                      {content}
-                      <span className="inline-flex items-center gap-1 mt-3 text-sm font-mono" style={{ color: "var(--cyan)" }}>
-                        x402.org ↗
-                      </span>
-                    </a>
-                  ) : (
-                    content
-                  )}
+                  {content}
                 </motion.div>
               </ScrollReveal>
             );

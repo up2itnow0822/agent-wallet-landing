@@ -1,15 +1,15 @@
 import Link from "next/link";
 
 const products = [
-  { name: "agentwallet-sdk", href: "https://www.npmjs.com/package/agentwallet-sdk" },
-  { name: "agentpay-mcp", href: "https://www.npmjs.com/package/agentpay-mcp" },
-  { name: "clawpowers", href: "https://www.npmjs.com/package/clawpowers" },
+  { name: "ClawPowers Agent", href: "https://github.com/up2itnow0822/ClawPowers-Agent" },
+  { name: "ClawPowers Commerce", href: "https://github.com/up2itnow0822/ClawPowers-Commerce" },
+  { name: "ClawPowers Skills", href: "https://www.npmjs.com/package/clawpowers" },
 ];
 
 const developers = [
   { name: "GitHub", href: "https://github.com/up2itnow0822" },
-  { name: "npm", href: "https://www.npmjs.com/package/agentwallet-sdk" },
-  { name: "Documentation", href: "https://github.com/up2itnow0822" },
+  { name: "npm", href: "https://www.npmjs.com/package/clawpowers" },
+  { name: "Documentation", href: "https://github.com/up2itnow0822/ClawPowers-Agent" },
   { name: "x402 Protocol", href: "https://x402.org" },
 ];
 
@@ -45,8 +45,8 @@ export default function Footer() {
               className="text-sm leading-relaxed"
               style={{ color: "var(--text-secondary)" }}
             >
-              Infrastructure for the autonomous economy — non-custodial agent
-              wallets, x402 payments, and MCP-native developer tooling.
+              Payment infrastructure for the autonomous agent economy — non-custodial
+              wallets, x402 micropayments, and cross-chain identity.
             </p>
           </div>
 
@@ -125,7 +125,7 @@ export default function Footer() {
           style={{ borderTop: "1px solid var(--border)" }}
         >
           <p className="text-xs font-mono text-center md:text-left" style={{ color: "var(--text-muted)" }}>
-            © 2026 AI Agent Economy. All rights reserved. Patent Pending.
+            © 2026 AI Agent Economy. All rights reserved. Patent Pending. · AI Agent Economy LLC (formation pending)
           </p>
           <div className="flex gap-5 items-center">
             <a
@@ -138,7 +138,7 @@ export default function Footer() {
               <GithubIcon />
             </a>
             <a
-              href="https://www.npmjs.com/package/agentwallet-sdk"
+              href="https://www.npmjs.com/package/clawpowers"
               target="_blank"
               rel="noopener noreferrer"
               className="footer-icon-link"

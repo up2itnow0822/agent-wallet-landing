@@ -6,28 +6,28 @@ import { motion, useReducedMotion } from "framer-motion";
 
 const products = [
   {
-    name: "agentwallet-sdk",
+    name: "ClawPowers Agent",
     description:
-      "Non-custodial AI agent wallets with on-chain spending limits. ERC-6551 TBA, ERC-8004 identity, x402 payments, 17-chain CCTP bridging, Uniswap V3 swaps.",
-    tags: ["npm", "879/wk downloads"] as const,
+      "Autonomous AI agent with built-in payments, self-improvement (RSI), and cross-chain identity. 94 skills, 332 tests, one-command install.",
+    tags: ["npm", "BSL 1.1"] as const,
     color: "var(--cyan)",
-    npm: "https://www.npmjs.com/package/agentwallet-sdk",
+    npm: "https://github.com/up2itnow0822/ClawPowers-Agent",
     icon: WalletIcon,
   },
   {
-    name: "agentpay-mcp",
+    name: "ClawPowers Commerce",
     description:
-      "Drop-in MCP payment server for Claude Code, Cursor, and any MCP-compatible agent. Non-custodial x402 payments with spending limits.",
-    tags: ["npm", "232/wk downloads"] as const,
+      "Agent access control and payment acceptance for websites and APIs. Guard filters agents by identity and reputation. Pay accepts x402 micropayments.",
+    tags: ["npm", "BSL 1.1"] as const,
     color: "var(--magenta)",
-    npm: "https://www.npmjs.com/package/agentpay-mcp",
+    npm: "https://github.com/up2itnow0822/ClawPowers-Commerce",
     icon: PayIcon,
   },
   {
-    name: "clawpowers",
+    name: "ClawPowers Skills",
     description:
-      "27 production skills for coding agents. Runtime execution, persistent memory, self-improvement, and autonomous payments.",
-    tags: ["npm", "626/wk downloads"] as const,
+      "94 production skills for any agent framework. Works with OpenClaw, Hermes, LangChain, CrewAI, and AutoGen. Payments and wallet built in.",
+    tags: ["npm", "BSL 1.1"] as const,
     color: "var(--orange)",
     npm: "https://www.npmjs.com/package/clawpowers",
     icon: ClawIcon,
@@ -84,7 +84,7 @@ export default function Products() {
                       rel="noopener noreferrer"
                       className="product-tag no-underline hover:brightness-125"
                     >
-                      View on npm ↗
+                      View ↗
                     </a>
                   </div>
 
@@ -130,7 +130,7 @@ export default function Products() {
                     }}
                   >
                     <span style={{ color: "var(--text-muted)" }}>$</span>
-                    npm install {p.name}
+                    npm install -g clawpowers
                   </a>
                 </motion.article>
               </ScrollReveal>

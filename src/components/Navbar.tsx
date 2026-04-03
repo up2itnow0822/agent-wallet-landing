@@ -6,15 +6,15 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { label: "Products", href: "#products" },
-  { label: "Developers", href: "#how-it-works" },
+  { label: "Features", href: "#features" },
   {
-    label: "GitHub",
-    href: "https://github.com/up2itnow0822",
+    label: "Docs",
+    href: "https://github.com/up2itnow0822/ClawPowers-Agent",
     external: true,
   },
   {
     label: "npm",
-    href: "https://www.npmjs.com/package/agentwallet-sdk",
+    href: "https://www.npmjs.com/package/clawpowers",
     external: true,
   },
 ];
@@ -97,7 +97,7 @@ export default function Navbar() {
             </a>
           ))}
           <motion.a
-            href="https://www.npmjs.com/package/agentwallet-sdk"
+            href="https://github.com/up2itnow0822/ClawPowers-Agent"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-lg font-semibold text-sm no-underline"
@@ -173,7 +173,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="https://www.npmjs.com/package/agentwallet-sdk"
+                href="https://github.com/up2itnow0822/ClawPowers-Agent"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary text-center justify-center mt-2"

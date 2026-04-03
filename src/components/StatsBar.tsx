@@ -5,19 +5,19 @@ import { motion, useReducedMotion } from "framer-motion";
 
 const stats = [
   {
-    value: "3",
-    title: "Production Packages",
-    detail: "agentwallet-sdk · agentpay-mcp · clawpowers",
+    value: "94",
+    title: "Production Skills",
+    detail: "ClawPowers Agent · Commerce · Skills · BSL 1.1",
   },
   {
-    value: "17",
-    title: "Chains Supported",
-    detail: "via CCTP cross-chain bridging",
+    value: "332+",
+    title: "Tests Passing",
+    detail: "332 JS tests + 138 Rust tests · 0.77% transaction fee",
   },
   {
     value: "1",
-    title: "Patent Filed",
-    detail: "USPTO provisional, March 2026",
+    title: "Patent Pending",
+    detail: "USPTO provisional, March 2026 · AI Agent Economy LLC (formation pending)",
   },
 ];
 

@@ -4,7 +4,7 @@ import { useState } from "react";
 import ScrollReveal from "./ScrollReveal";
 import { motion, useReducedMotion } from "framer-motion";
 
-const INSTALL_CMD = "npm install agentwallet-sdk";
+const INSTALL_CMD = "npm install -g clawpowers";
 
 export default function CTA() {
   const [copied, setCopied] = useState(false);
@@ -32,11 +32,11 @@ export default function CTA() {
         <ScrollReveal>
           <h2 className="section-title mb-6">
             Start Building with{" "}
-            <span className="gradient-text">Agent Payments</span>
+            <span className="gradient-text">ClawPowers</span>
           </h2>
           <p className="section-subtitle mx-auto text-center mb-10 text-balance">
-            Non-custodial wallets, MCP tools, and x402-native flows — install the SDK,
-            read the docs on GitHub, and join builders on Discord.
+            Non-custodial wallets, x402 payments, and 94 production skills — install in one command,
+            read the docs on GitHub, and ship agents that can pay their own way.
           </p>
         </ScrollReveal>
 
@@ -63,17 +63,17 @@ export default function CTA() {
         <ScrollReveal delay={160}>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center">
             <motion.a
-              href="https://github.com/up2itnow0822"
+              href="https://github.com/up2itnow0822/ClawPowers-Agent"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary justify-center"
               whileHover={reduce ? undefined : { scale: 1.02 }}
               whileTap={reduce ? undefined : { scale: 0.98 }}
             >
-              <span>Read the Docs</span>
+              <span>Get Started</span>
             </motion.a>
             <motion.a
-              href="https://discord.gg/agentecon"
+              href="https://www.npmjs.com/package/clawpowers"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary justify-center"
@@ -84,7 +84,7 @@ export default function CTA() {
               whileHover={reduce ? undefined : { scale: 1.02 }}
               whileTap={reduce ? undefined : { scale: 0.98 }}
             >
-              Join Discord
+              View on npm
             </motion.a>
           </div>
         </ScrollReveal>

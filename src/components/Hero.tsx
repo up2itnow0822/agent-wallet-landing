@@ -33,15 +33,15 @@ export default function Hero() {
             <ScrollReveal>
               <div className="badge mx-auto lg:mx-0 w-fit">
                 <span aria-hidden>⬡</span>
-                AUTONOMOUS AGENT PAYMENTS
+                CLAWPOWERS — AGENTS THAT PAY
               </div>
             </ScrollReveal>
 
             <ScrollReveal delay={80}>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-[1.05]">
-                The Future of{" "}
+                Agents That Finish Tasks —{" "}
                 <span className="block sm:inline mt-1 sm:mt-0">
-                  <span className="gradient-text">Autonomous Commerce</span>
+                  <span className="gradient-text">Even When They Have to Pay</span>
                 </span>
               </h1>
             </ScrollReveal>
@@ -51,23 +51,23 @@ export default function Hero() {
                 className="text-lg sm:text-xl max-w-xl mx-auto lg:mx-0 leading-relaxed"
                 style={{ color: "var(--text-secondary)" }}
               >
-                Empowering AI agents with non-custodial wallets, x402 payments,
-                and spending controls. The infrastructure for agents that actually
-                pay for things.
+                Non-custodial payment rails, x402 micropayments, and cross-chain
+                identity (UAID + ERC-8004) for the autonomous agent economy.
+                BSL 1.1 licensed. One-command install.
               </p>
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
               <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start">
                 <motion.a
-                  href="https://www.npmjs.com/package/agentwallet-sdk"
+                  href="https://github.com/up2itnow0822/ClawPowers-Agent"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary justify-center sm:justify-start"
                   whileHover={reduce ? undefined : { scale: 1.02 }}
                   whileTap={reduce ? undefined : { scale: 0.98 }}
                 >
-                  <span>Get Started</span>
+                  <span>Get Started →</span>
                 </motion.a>
                 <motion.a
                   href="https://github.com/up2itnow0822"

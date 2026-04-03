@@ -18,9 +18,9 @@ const siteUrl = "https://ai-agent-economy.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "AI Agent Economy — Infrastructure for Agents That Pay",
+  title: "AI Agent Economy — Payment Infrastructure for AI Agents",
   description:
-    "Your AI agent hits a paid API. It needs to pay — safely, with caps, with human approval. That's what we build. Non-custodial · Open Source · Patent Pending",
+    "Non-custodial payment rails, agent identity, and site protection for the autonomous agent economy. ClawPowers Agent, Commerce, and Skills.",
   keywords: [
     "AI agent payments",
     "x402",
@@ -32,18 +32,18 @@ export const metadata: Metadata = {
     "MCP tools",
   ],
   openGraph: {
-    title: "AI Agent Economy — Infrastructure for Agents That Pay",
+    title: "AI Agent Economy — Payment Infrastructure for AI Agents",
     description:
-      "Non-custodial payment infrastructure for AI agents. x402, 17-chain CCTP, ERC-8004, MCP tools.",
+      "Non-custodial payment rails, agent identity, and site protection for the autonomous agent economy. ClawPowers Agent, Commerce, and Skills.",
     type: "website",
     url: siteUrl,
   },
   twitter: {
     card: "summary_large_image",
     site: "@AgentEconoemy",
-    title: "AI Agent Economy — Infrastructure for Agents That Pay",
+    title: "AI Agent Economy — Payment Infrastructure for AI Agents",
     description:
-      "Non-custodial payment infrastructure for AI agents. x402, 17-chain CCTP, ERC-8004, MCP tools.",
+      "Non-custodial payment rails, agent identity, and site protection for the autonomous agent economy. ClawPowers Agent, Commerce, and Skills.",
   },
 };
 
